@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFF3F5F7),
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFD8ECF1)),
+        //accentcolor berubah jadi colorScheme.secondary
       ),
       home: HomeScreen(),
     );

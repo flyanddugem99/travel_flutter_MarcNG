@@ -7,11 +7,11 @@ class Activity {
   int price;
 
   Activity({
-    required this.imageUrl,
-    required this.name,
-    required this.type,
-    required this.startTimes,
-    required this.rating,
-    required this.price,
+    this.imageUrl,
+    this.name,
+    this.type,
+    this.startTimes,
+    this.rating,
+    this.price,
   });
 }
