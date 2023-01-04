@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:terrevel/widgets/hotel_carousel.dart';
 
 import '../widgets/destination_carousel.dart';
 
@@ -10,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int _currentTab = 0;
 
   List<IconData> _icons = [
     FontAwesomeIcons.plane,
@@ -54,8 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: ListView(
+      body: SafeArea(
+        child: ListView(
           padding: const EdgeInsets.symmetric(
               vertical: 30.0), // padding for vertical
           children: <Widget>[
@@ -89,8 +91,45 @@ class _HomeScreenState extends State<HomeScreen> {
                 //MainAxisAlignment.spaceAround is for the space between the icons
                 ),
             SizedBox(height: 20.0),
+            //sizedbox buat kayak kotak panjang ga keliatan gitu buat ngasih jarak antar widget
             DestinationCarousel(),
-          ]),
-    ));
+            SizedBox(height: 20.0),
+            HotelCarousel(),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTab,
+        onTap: (int value) {
+          setState(() {
+            _currentTab = value;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search,
+              size: 25.0,
+            ),
+            label: ' ',
+            //flutter update , skrg pakenya label bkn ttl
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.local_pizza,
+              size: 25.0,
+            ),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: CircleAvatar(
+              radius: 15.0,
+              backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+            ),
+            label: ' ',
+          ),
+        ],
+      ),
+    );
   }
 }
