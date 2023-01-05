@@ -109,14 +109,17 @@ class DestinationCarousel extends StatelessWidget {
                           ],
                         ),
                         child: Stack(children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            //buat gambarnya jadi kayak ada garis melengkung di tiap ujungye
-                            child: Image(
-                              height: 180.0,
-                              width: 180.0,
-                              image: AssetImage(destination.imageUrl),
-                              fit: BoxFit.cover,
+                          Hero(
+                            tag: destination.imageUrl,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              //buat gambarnya jadi kayak ada garis melengkung di tiap ujungye
+                              child: Image(
+                                height: 180.0,
+                                width: 180.0,
+                                image: AssetImage(destination.imageUrl),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Positioned(
