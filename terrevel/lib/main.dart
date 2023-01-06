@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFF3F5F7),
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFD8ECF1)),
+        //primaryColor buat warna utama
+        //scaffoldBackgroundColor buat warna background buat icon yang ada di widgetnya
+        //debugShowCheckedModeBanner itu biar nga ada tanda logo debug di pojok kanan atasnya
         //accentcolor udah @deprecated, disarankan untuk pake colorScheme.secondary
         //saran didasarkan pada dokumentasi dart
         //biasanya colorScheme.secondary itu warnanya kontras dengan primary color
