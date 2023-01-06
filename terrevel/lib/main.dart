@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFF3F5F7),
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFD8ECF1)),
-        //accentcolor berubah jadi colorScheme.secondary
+        //accentcolor udah @deprecated, disarankan untuk pake colorScheme.secondary
+        //saran didasarkan pada dokumentasi dart
+        //biasanya colorScheme.secondary itu warnanya kontras dengan primary color
       ),
       home: HomeScreen(),
     );
