@@ -38,6 +38,7 @@ class DestinationCarousel extends StatelessWidget {
             ],
           ),
         ),
+        //Container di bawah buat Deskripsi Destination.Activities
         Container(
           height: 300.0,
           child: ListView.builder(
@@ -96,6 +97,7 @@ class DestinationCarousel extends StatelessWidget {
                           ),
                         ),
                       ),
+                      //Container di bawah buat Gambar Destination
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
